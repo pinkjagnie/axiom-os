@@ -1,0 +1,11 @@
+.footerSection {
+  height: 4vh;
+  width: 100vw;
+  background-color: #f9f9f9;
+}
+
+.footerSection p {
+  font-size: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
