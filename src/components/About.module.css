@@ -19,3 +19,27 @@
   height: auto;
   width: 100%;
 }
+
+@media (min-width: 360px) {
+  .description p {
+    font-size: 1.3rem;
+    margin: 2rem auto;
+  }
+
+  .description p:first-of-type {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 390px) {
+  .description p {
+    width: 85vw;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 410px) {
+  .description p {
+    width: 75vw;
+  }
+}

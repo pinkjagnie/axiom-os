@@ -2,6 +2,7 @@
   height: 90vh;
   width: 100vw;
   overflow: hidden;
+  background-color: #f9f9f9;
 }
 
 .image img {
@@ -43,4 +44,46 @@
   flex-grow: 1;
   width: 50vw;
   margin: 1.5vh auto;
+}
+
+.formTopSection {
+  background-color: #656565;
+}
+
+@media (min-width: 360px) {
+  .image img {
+    width: 100vw;
+  }
+
+  .slogan h1 {
+    margin: 1.5rem auto;
+    font-size: 1.8rem;
+  }
+
+  .points img {
+    width: 10vw;
+  }
+
+  .points p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 390px) {
+
+  .slogan h1 {
+    margin: 2rem auto;
+    font-size: 2rem;
+  }
+
+  .points p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 410px) {
+
+  .points {
+    margin: 3.5vh auto 0 auto;
+  }
 }

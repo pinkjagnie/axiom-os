@@ -1,0 +1,49 @@
+.formTop {
+  height: 35vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #656565;
+}
+
+.formTop p {
+  width: 90vw;
+  margin: 1.3rem auto;
+  color: #F9F9F9;
+}
+
+.formTop h1 {
+  padding-top: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: whitesmoke;
+}
+
+@media (min-width: 360px) {
+  .formTop p {
+    margin: 2rem auto;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+  }
+
+  .formTop h1 {
+    padding-top: 0.5em;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 390px) {
+  .formTop p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 410px) {
+  .formTop p {
+    width: 75vw;
+  }
+
+  .formTop h1 {
+    font-size: 2.5rem;
+  }
+}

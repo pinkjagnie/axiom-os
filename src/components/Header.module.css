@@ -2,6 +2,7 @@
   width: 100vw;
   height: 10vh;
   overflow: hidden;
+  background-color: #f9f9f9;
 }
 
 .header .logo {
@@ -9,4 +10,18 @@
   left: 5%;
   top: 5%;
   width: 35vw;
+}
+
+@media (min-width: 360px) {
+  .header .logo {
+    left: 5%;
+    top: 10%;
+    width: 45vw;
+  }
+}
+
+@media (min-width: 410px) {
+  .header .logo {
+    width: 40vw;
+  }
 }
