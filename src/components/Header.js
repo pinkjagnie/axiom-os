@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./Header.module.css";
-import logo from "../img/logo_220-140.png";
+import logo from "../img/logo_250-100.jpg";
 
 const Header = () => {
   return (

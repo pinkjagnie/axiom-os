@@ -2,17 +2,20 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-color: #8cd26a;
+  background-color: #656565;
 }
 
 .formSection p {
   width: 90vw;
-  margin: 1rem auto;
+  margin: 1.3rem auto;
+  color: #F9F9F9;
 }
 
 .formSection h1 {
+  padding-top: 0.3em;
   text-transform: uppercase;
   text-align: center;
+  color: whitesmoke;
 }
 
 .control,
@@ -23,19 +26,18 @@
 .control label {
   display: block;
   font-weight: bold;
-  margin-bottom: 0.5rem;
   text-align: left;
   margin: 0 10vw;
+  color: white;
 }
 
 .control input {
   display: block;
   width: 85vw;
-  margin: 0 auto;
+  margin: 0.3rem auto 0 auto;
   padding: 0.2rem;
   border-radius: 12px;
   border: 1px solid #ccc;
-  /* font: inherit; */
 }
 
 .control input:focus {
@@ -46,6 +48,7 @@
 .check {
   display: flex;
   width: 75vw;
+  margin-top: 1.5rem;
 }
 
 .check input {
@@ -56,14 +59,15 @@
   margin: 0 0.5rem;
   text-align: left;
   font-size: 0.8rem;
+  color: #333652;
 }
 
 .form button {
   display: block;
   width: 85vw;
-  margin: 1.5rem auto;
+  margin: 1.8rem auto;
   padding: 0.5rem 2rem;
-  border: 1px solid white;
+  border: 1.5px solid white;
   border-radius: 25px;
   background-color: #1f2b37;
   color: white;
@@ -72,7 +76,9 @@
   cursor: pointer;
 }
 
+
+/* Od 1024px
 .form button:hover {
   background-color: white;
   color: #1f2b37;
-}
+} */

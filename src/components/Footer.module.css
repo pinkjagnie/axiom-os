@@ -2,6 +2,7 @@
   height: 4vh;
   width: 100vw;
   background-color: #f9f9f9;
+  overflow: hidden;
 }
 
 .footerSection p {
