@@ -3,6 +3,7 @@ import classes from "./Form.module.css";
 const Form = () => {
   return (
     <div className={classes.formSection}>
+      <div className={classes.blank}></div>
       <form className={classes.form}>
         <div className={classes.control}>
           <label htmlFor="name">Your name</label>

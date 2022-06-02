@@ -1,7 +1,17 @@
 .formSection {
   height: 65vh;
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
+  background-color: #656565;
+}
+
+.blank {
+  position: relative;
+  top: -1%;
+  left: 0;
+  width: 100vw;
+  height: 1vh;
+  z-index: 1;
   background-color: #656565;
 }
 

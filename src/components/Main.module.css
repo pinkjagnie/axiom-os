@@ -46,10 +46,6 @@
   margin: 1.5vh auto;
 }
 
-.formTopSection {
-  background-color: #656565;
-}
-
 @media (min-width: 360px) {
   .image img {
     width: 100vw;

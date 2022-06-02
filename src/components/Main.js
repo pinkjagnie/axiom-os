@@ -29,9 +29,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className={classes.formTopSection}>
-        <FormTop />
-      </div>
+      <FormTop />
     </>
   );
 };
