@@ -1,3 +1,9 @@
+.mainCard {
+  height: 125vh;
+  width: 100vw;
+  background-color: #f9f9f9;
+}
+
 .main {
   height: 90vh;
   width: 100vw;
@@ -52,8 +58,8 @@
   }
 
   .slogan h1 {
-    margin: 1.5rem auto;
-    font-size: 1.8rem;
+    margin: 0.8rem auto;
+    font-size: 1.5rem;
   }
 
   .points img {
@@ -61,12 +67,11 @@
   }
 
   .points p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 390px) {
-
   .slogan h1 {
     margin: 2rem auto;
     font-size: 2rem;
@@ -78,8 +83,76 @@
 }
 
 @media (min-width: 410px) {
-
   .points {
     margin: 3.5vh auto 0 auto;
   }
+}
+
+@media (min-width: 600px) {
+  .image img {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .image img {
+    width: 75vw;
+  }
+
+  .slogan h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  .points {
+    margin: 1.5rem auto 0 auto;
+  }
+
+  .points p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainCard {
+    height: 90vh;
+  }
+
+  .main {
+    position: relative;
+  }
+
+  .image img {
+    position: absolute;
+    top: 8vh;
+    left: 8vw;
+    width: 40vw;
+  }
+
+  .slogan {
+    position: absolute;
+    top: 2vh;
+    left: 50vw;
+    width: 40vw;
+    max-height: 70vh;
+  }
+
+  .slogan h1 {
+    margin: 1.3rem auto;
+  }
+
+  .points {
+    width: 30vw;
+  }
+
+  .points img {
+    width: 4vw;
+  }
+
+  .points p {
+    width: 21vw;
+    padding-left: 2vw;
+    text-align: left;
+  }
+
 }

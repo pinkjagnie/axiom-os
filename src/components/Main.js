@@ -7,7 +7,7 @@ import liDot from "../img/ul_style_160-160.jpg";
 
 const Main = () => {
   return (
-    <>
+    <div className={classes.mainCard}>
       <div className={classes.main}>
         <div className={classes.image}>
           <img src={phonesImg} alt="Snapshots of AxiomOs" />
@@ -30,7 +30,7 @@ const Main = () => {
         </div>
       </div>
       <FormTop />
-    </>
+    </div>
   );
 };
 

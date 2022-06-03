@@ -6,7 +6,15 @@
 }
 
 .footerSection p {
+  line-height: 4vh;
   font-size: 0.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  .footerSection p {
+    font-size: 1rem;
+    margin: auto;
+  }
 }

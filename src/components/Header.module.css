@@ -25,3 +25,9 @@
     width: 40vw;
   }
 }
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .header .logo {
+    width: 15vw;
+  }
+}

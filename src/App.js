@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
-import Form from "./components/Form/Form";
 import About from "./components/About";
 import Footer from "./components/Footer";
 
@@ -11,7 +10,6 @@ function App() {
     <div className="App">
       <Header />
       <Main />
-      <Form />
       <About />
       <Footer />
     </div>

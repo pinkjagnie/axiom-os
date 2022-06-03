@@ -1,7 +1,6 @@
 .formSection {
   height: 65vh;
   width: 100vw;
-  /* overflow: hidden; */
   background-color: #656565;
 }
 
@@ -76,7 +75,7 @@
 @media (min-width: 360px) {
   .control,
   .check {
-    margin: 1.5rem auto;
+    margin: 1.3rem auto;
   }
 
   .control input {
@@ -89,7 +88,7 @@
   }
 
   .form button {
-    margin: 3rem auto;
+    margin: 2.5rem auto;
     font-size: 2rem;
   }
 }
@@ -126,10 +125,72 @@
   }
 }
 
+@media (min-width: 768px) and (orientation: portrait) {
+  .control input {
+    width: 60vw;
+  }
 
-/* Od 1024px
-.form button:hover {
-  background-color: white;
-  color: #1f2b37;
-} */
+  .control label {
+    margin: 0 22vw;
+    font-size: 1.5rem;
+  }
+
+  .check {
+    width: 50vw;
+  }
+
+  .check label {
+    font-size: 1.3rem;
+  }
+
+  .form button {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blank {
+   display: none;
+  }
+
+  .formSection {
+    position: absolute;
+    top: -2vh;
+    left: 50vw;
+    width: 40vw;
+    height: 72vh;
+    z-index: 1;
+  }
+
+  .control,
+  .check {
+    margin: 1rem auto;
+  }
+
+  .control input {
+    width: 30vw;
+  }
+
+  .control label {
+    margin: 0 5vw;
+    font-size: 1rem;
+  }
+
+  .check {
+    width: 25vw;
+  }
+
+  .check label {
+    font-size: 1rem;
+  }
+
+  .form button {
+    width: 30vw;
+  }
+
+  .form button:hover {
+    background-color: white;
+    color: #1f2b37;
+  }
+}
 
