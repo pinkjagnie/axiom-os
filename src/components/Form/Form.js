@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import useInput from '../../hooks/use-input';
 
 import classes from "./Form.module.css";
@@ -6,6 +7,8 @@ const isNotEmpty = (value) => value.trim() !== '';
 const isEmail = (value) => value.includes('@');
 
 const Form = (props) => {
+
+  const checkboxRef = useRef();
 
   const {
     value: firstNameValue,
@@ -30,6 +33,10 @@ const Form = (props) => {
   if (firstNameIsValid && emailIsValid) {
     formIsValid = true;
   }
+  
+  const checkboxHandler = () => {
+    checkboxRef.current.checked = true;
+  }
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -37,13 +44,14 @@ const Form = (props) => {
     if (!formIsValid) {
       return;
     }
-
-
+   
     console.log('Submitted!');
     console.log(firstNameValue, emailValue);
+    console.log(checkboxRef.current.checked);
 
     resetFirstName();
     resetEmail();
+    checkboxRef.current.checked = false;
   };
 
   // const firstNameClasses = firstNameHasError ? 'form-control invalid' : 'form-control';
@@ -62,7 +70,7 @@ const Form = (props) => {
           <input type="email" id="email" value={emailValue} onChange={emailChangeHandler} onBlur={emailBlurHandler} />
         </div>
         <div className={classes.check}>
-          <input type="checkbox" id="checkbox" />
+          <input type="checkbox" id="checkbox" ref={checkboxRef} onClick={checkboxHandler} />
           <label htmlFor="checkbox">
             By subscribing to the list, you have a chance to meet a very cool
             Sheep. But if you are a girl, then don't count on too much cause
