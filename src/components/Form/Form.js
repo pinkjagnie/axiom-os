@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import useInput from '../../hooks/use-input';
 
 import classes from "./Form.module.css";
@@ -7,6 +7,7 @@ const isNotEmpty = (value) => value.trim() !== '';
 const isEmail = (value) => value.includes('@');
 
 const Form = (props) => {
+  const [isLoading, setIsLoading] = useState(false);
 
   const checkboxRef = useRef();
 
@@ -30,20 +31,54 @@ const Form = (props) => {
 
   let formIsValid = false;
 
-  if (firstNameIsValid && emailIsValid) {
+  if (firstNameIsValid && emailIsValid && checkboxRef) {
     formIsValid = true;
   }
+
+  // FETCH, POST
+
+
+  async function addUser(firstNameValue, emailValue) {
+    const response = await fetch('http://test.axiomos.pl/api/subuser/register', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify({
+        name: firstNameValue,
+        email: emailValue
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then((res) => {
+      setIsLoading(false);
+      if (res.ok) {
+        console.log(res);
+        return res.json();
+      } else {
+        return res.json().then((data) => {
+          let errorMessage = "Something went wrong! Plese check you form!"
+          console.log(data);
+          //throw new Error(errorMessage);
+        });
+      }
+    })
+  };
   
   const checkboxHandler = () => {
     checkboxRef.current.checked = true;
-  }
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
+
+    setIsLoading(true);
     
     if (!formIsValid) {
       return;
     }
+
+    addUser(firstNameValue, emailValue);
    
     console.log('Submitted!');
     console.log(firstNameValue, emailValue);
