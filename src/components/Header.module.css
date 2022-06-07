@@ -8,26 +8,36 @@
 .header .logo {
   position: relative;
   left: 5%;
-  top: 5%;
-  width: 35vw;
+  top: 15%;
+  width: 50vw;
 }
 
 @media (min-width: 360px) {
   .header .logo {
     left: 5%;
-    top: 10%;
-    width: 45vw;
+    top: 15%;
+    width: 55vw;
   }
 }
 
 @media (min-width: 410px) {
   .header .logo {
-    width: 40vw;
+    width: 60vw;
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 1024px) {
   .header .logo {
-    width: 15vw;
+    left: 5%;
+    top: 10%;
+    width: 28vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header .logo {
+    left: 5%;
+    top: 3%;
+    width: 25vw;
   }
 }

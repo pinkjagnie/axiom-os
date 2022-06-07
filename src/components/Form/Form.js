@@ -39,7 +39,7 @@ const Form = (props) => {
 
 
   async function addUser(firstNameValue, emailValue) {
-    const response = await fetch('http://test.axiomos.pl/api/subuser/register', {
+    const response = await fetch(' https://cors-anywhere.herokuapp.com/http://test.axiomos.pl/api/subuser/register', {
       method: 'POST',
       mode: 'no-cors',
       body: JSON.stringify({

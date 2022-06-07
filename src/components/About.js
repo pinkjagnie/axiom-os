@@ -1,7 +1,7 @@
 import Form from "./Form/Form";
 
 import classes from "./About.module.css";
-import imgDate from "../img/img_date_500-200.jpg";
+import imgDate from "../img/data2_axiom_1000-200.svg";
 
 const About = () => {
   return (

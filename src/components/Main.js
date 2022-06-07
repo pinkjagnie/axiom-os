@@ -2,8 +2,8 @@ import FormTop from "./Form/FormTop";
 
 import classes from "./Main.module.css";
 
-import phonesImg from "../img/phones_400-300.jpg";
-import liDot from "../img/ul_style_160-160.jpg";
+import phonesImg from "../img/phones_400-300.svg";
+import liDot from "../img/ul_style2_160-160.svg";
 
 const Main = () => {
   return (
