@@ -9,9 +9,7 @@ const isNotEmpty = (value) => value.trim() !== '';
 const isEmail = (value) => value.includes('@');
 
 const Form = (props) => {
-  // const [isLoading, setIsLoading] = useState(false);
   const [modalIsShown, setModalIsShown] = useState(false);
-  const [errorModalIsShown, setErrorModalIsShown] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
 
   const checkboxRef = useRef();
@@ -42,7 +40,6 @@ const Form = (props) => {
 
   const hideModalHandler = () => {
     setModalIsShown(false);
-    setErrorModalIsShown(false);
   };
 
   // FETCH, POST
@@ -60,21 +57,16 @@ const Form = (props) => {
       }
     })
     .then((res) => {
-      // setIsLoading(false);
       if (res.ok) {
         console.log(res);
-        // modalIsShown = true;
         setModalIsShown(true);
         return res.json();
       } else {
         return res.json().then((data) => {
-          setErrorModalIsShown(true);
+          setModalIsShown(true);
           let errorModalMessage = '';
           errorModalMessage = data.error;
           setErrorMessage(errorModalMessage)
-          // console.log(response.status);
-          // console.log(data);
-          // throw new Error(errorMessage);
         });
       }
     })
@@ -110,8 +102,7 @@ const Form = (props) => {
   return (
     <Fragment>
     <div className={classes.formSection}>
-    {modalIsShown && !errorModalIsShown && <Modal onClose={hideModalHandler} success={modalIsShown} />}
-    {errorModalIsShown && !modalIsShown && <Modal onClose={hideModalHandler} error={errorModalIsShown} errorMessage={errorMessage} />}
+    {modalIsShown && <Modal onClose={hideModalHandler} errorMessage={errorMessage} />}
       <div className={classes.blank}></div>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
