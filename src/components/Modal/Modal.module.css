@@ -1,0 +1,69 @@
+.modalSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  position: fixed;
+  top: 25vh;
+  left: 20vw;
+  width: 60vw;
+  height: 50vh;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.closeButton {
+  position: fixed;
+  width: 8%;
+  height: auto;
+  right: -3%;
+  top: -5%;
+  cursor: pointer;
+}
+
+.text {
+  padding: 1.3rem;
+  text-align: center;
+} 
+
+.closing {
+  display: block;
+  width: 30vw;
+  margin: 1.8rem auto;
+  padding: 0.5rem 2rem;
+  border: 1.5px solid white;
+  border-radius: 25px;
+  background-color: #1f2b37;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

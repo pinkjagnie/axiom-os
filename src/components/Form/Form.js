@@ -1,5 +1,7 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, React, Fragment } from 'react';
 import useInput from '../../hooks/use-input';
+
+import Modal from '../Modal/Modal';
 
 import classes from "./Form.module.css";
 
@@ -7,7 +9,10 @@ const isNotEmpty = (value) => value.trim() !== '';
 const isEmail = (value) => value.includes('@');
 
 const Form = (props) => {
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
+  const [modalIsShown, setModalIsShown] = useState(false);
+  const [errorModalIsShown, setErrorModalIsShown] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
 
   const checkboxRef = useRef();
 
@@ -35,13 +40,17 @@ const Form = (props) => {
     formIsValid = true;
   }
 
+  const hideModalHandler = () => {
+    setModalIsShown(false);
+    setErrorModalIsShown(false);
+  };
+
   // FETCH, POST
 
 
   async function addUser(firstNameValue, emailValue) {
-    const response = await fetch(' https://cors-anywhere.herokuapp.com/http://test.axiomos.pl/api/subuser/register', {
+    const response = await fetch('https://cors-anywhere.herokuapp.com/http://test.axiomos.pl/api/subuser/register', {
       method: 'POST',
-      mode: 'no-cors',
       body: JSON.stringify({
         name: firstNameValue,
         email: emailValue
@@ -51,15 +60,21 @@ const Form = (props) => {
       }
     })
     .then((res) => {
-      setIsLoading(false);
+      // setIsLoading(false);
       if (res.ok) {
         console.log(res);
+        // modalIsShown = true;
+        setModalIsShown(true);
         return res.json();
       } else {
         return res.json().then((data) => {
-          let errorMessage = "Something went wrong! Plese check you form!"
-          console.log(data);
-          //throw new Error(errorMessage);
+          setErrorModalIsShown(true);
+          let errorModalMessage = '';
+          errorModalMessage = data.error;
+          setErrorMessage(errorModalMessage)
+          // console.log(response.status);
+          // console.log(data);
+          // throw new Error(errorMessage);
         });
       }
     })
@@ -72,7 +87,7 @@ const Form = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    setIsLoading(true);
+    // setIsLoading(true);
     
     if (!formIsValid) {
       return;
@@ -93,7 +108,10 @@ const Form = (props) => {
   // const emailClasses = emailHasError ? 'form-control invalid' : 'form-control';
 
   return (
+    <Fragment>
     <div className={classes.formSection}>
+    {modalIsShown && !errorModalIsShown && <Modal onClose={hideModalHandler} success={modalIsShown} />}
+    {errorModalIsShown && !modalIsShown && <Modal onClose={hideModalHandler} error={errorModalIsShown} errorMessage={errorMessage} />}
       <div className={classes.blank}></div>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
@@ -115,6 +133,7 @@ const Form = (props) => {
         <button>Submit</button>
       </form>
     </div>
+    </Fragment>
   );
 };
 
