@@ -34,10 +34,6 @@ const Form = (props) => {
 
   let formIsValid = false;
 
-  // if (firstNameIsValid && emailIsValid && checkboxRef.current.checked) {
-  //   formIsValid = true;
-  // }
-
   const hideModalHandler = () => {
     setModalIsShown(false);
   };
@@ -56,11 +52,9 @@ const Form = (props) => {
     })
     .then((res) => {
       if (res.ok) {
-        console.log(res);
         setModalIsShown(true);
-        // return res.json();
         errorModalMessage = '';
-                  setErrorMessage(errorModalMessage)
+        setErrorMessage(errorModalMessage)
 
       } else {
         return res.json().then((data) => {
@@ -75,31 +69,21 @@ const Form = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    // setIsLoading(true);
     if (firstNameIsValid && emailIsValid && checkboxRef.current.checked) {
       formIsValid = true;
     } else {
       return;
     }
-    // TODO recaftor conditions
-    if (!formIsValid) {
-      return;
-    }
-
+ 
     addUser(firstNameValue, emailValue);
    
-    console.log('Submitted!');
-    console.log(firstNameValue, emailValue);
-    console.log(checkboxRef.current.checked);
-
     resetFirstName();
     resetEmail();
     checkboxRef.current.checked = false;
     formIsValid = false;
   };
 
-  // const firstNameClasses = firstNameHasError ? 'form-control invalid' : 'form-control';
-  // const emailClasses = emailHasError ? 'form-control invalid' : 'form-control';
+  let hasError = firstNameHasError || emailHasError;
 
   return (
     <Fragment>
@@ -108,16 +92,16 @@ const Form = (props) => {
       <div className={classes.blank}></div>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor="name">Your name</label>
-          <input type="text" id="name" value={firstNameValue} onChange={firstNameChangeHandler} onBlur={firstNameBlurHandler} />
+          <label htmlFor="name" style={firstNameHasError ? {color: '#9b0000'} : undefined}>Your name</label>
+          <input type="text" id="name" value={firstNameValue} onChange={firstNameChangeHandler} onBlur={firstNameBlurHandler} style={firstNameHasError ? {borderColor: '#9b0000'} : undefined}/>
         </div>
         <div className={classes.control}>
-          <label htmlFor="email">Your email</label>
-          <input type="email" id="email" value={emailValue} onChange={emailChangeHandler} onBlur={emailBlurHandler} />
+          <label htmlFor="email" style={emailHasError ? {color: '#9b0000'} : undefined}>Your email</label>
+          <input type="email" id="email" value={emailValue} onChange={emailChangeHandler} onBlur={emailBlurHandler} style={emailHasError ? {borderColor: '#9b0000'} : undefined}/>
         </div>
         <div className={classes.check}>
-          <input type="checkbox" id="checkbox" ref={checkboxRef} />
-          <label htmlFor="checkbox">
+          <input type="checkbox" id="checkbox" ref={checkboxRef} style={hasError ? {borderColor: '#9b0000'} : undefined}/>
+          <label htmlFor="checkbox" style={hasError ? {color: '#9b0000'} : undefined}>
             By subscribing to the list, you have a chance to meet a very cool
             Sheep. But if you are a girl, then don't count on too much cause
             Sheep already has super cool Sheep-girl - sorry!
