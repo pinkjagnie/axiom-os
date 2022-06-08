@@ -11,7 +11,7 @@
 .modal {
   position: fixed;
   top: 25vh;
-  left: 20vw;
+  left: calc(50% - 35vw);
   width: 60vw;
   height: 50vh;
   background-color: white;
@@ -24,7 +24,7 @@
 
 .closeButton {
   position: fixed;
-  width: 8%;
+  width: 18%;
   height: auto;
   right: -3%;
   top: -5%;
@@ -32,14 +32,14 @@
 }
 
 .text {
-  padding: 1.3rem;
+  padding: 1.1rem;
   text-align: center;
 } 
 
 .closing {
   display: block;
-  width: 30vw;
-  margin: 1.8rem auto;
+  width: 40vw;
+  margin: 0.5rem auto;
   padding: 0.5rem 2rem;
   border: 1.5px solid white;
   border-radius: 25px;
@@ -50,10 +50,56 @@
   cursor: pointer;
 }
 
+@media (min-width: 360px) {
+  .text {
+    padding: 2.5rem;
+  }
+
+  .closing {
+    margin: 1.5rem auto;
+  }
+}
+
+@media (min-width: 600px) {
+  .text {
+    padding: 3rem;
+  }
+
+  .closing {
+    margin: 1.5rem auto;
+  }
+}
+
 @media (min-width: 768px) {
   .modal {
-    width: 40rem;
-    left: calc(50% - 20rem);
+    width: 60vw;
+    left: calc(50% - 30vw);
+  }
+
+  .closing {
+    margin: 1.8rem auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .closeButton {
+    width: 8%;
+    height: auto;
+    right: -3%;
+    top: -5%;
+  }
+
+  .text {
+    padding: 1.3rem;
+  }
+
+  .closing {
+    width: 30vw;
+  }
+  
+  .closing:hover {
+    background-color: #656565;
+    color: white;
   }
 }
 

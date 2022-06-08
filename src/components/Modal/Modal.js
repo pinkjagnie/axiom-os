@@ -7,10 +7,10 @@ const Modal = (props) => {
   let title = '';
   let content = '';
 
-  if (props.errorMessage) {
+  if (props.errorMessage !== '') {
     title = <h1 style={{color: '#9b0000'}}>Ups!</h1>;
     content = <p style={{color: '#9b0000'}}>Something went wrong. {props.errorMessage}!</p>
-  } else if (props.errorMessage !== '') {
+  } else if (props.errorMessage === '') {
     title = <p>Thank you!</p>;
     content = <p>Thank you for subscribing to the list! Now, you only have to check your email to confirm and that will be all.</p>
   }

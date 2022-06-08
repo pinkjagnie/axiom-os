@@ -34,18 +34,16 @@ const Form = (props) => {
 
   let formIsValid = false;
 
-  if (firstNameIsValid && emailIsValid && checkboxRef) {
-    formIsValid = true;
-  }
+  // if (firstNameIsValid && emailIsValid && checkboxRef.current.checked) {
+  //   formIsValid = true;
+  // }
 
   const hideModalHandler = () => {
     setModalIsShown(false);
   };
 
-  // FETCH, POST
-
-
   async function addUser(firstNameValue, emailValue) {
+    let errorModalMessage = '';
     const response = await fetch('https://cors-anywhere.herokuapp.com/http://test.axiomos.pl/api/subuser/register', {
       method: 'POST',
       body: JSON.stringify({
@@ -60,11 +58,13 @@ const Form = (props) => {
       if (res.ok) {
         console.log(res);
         setModalIsShown(true);
-        return res.json();
+        // return res.json();
+        errorModalMessage = '';
+                  setErrorMessage(errorModalMessage)
+
       } else {
         return res.json().then((data) => {
           setModalIsShown(true);
-          let errorModalMessage = '';
           errorModalMessage = data.error;
           setErrorMessage(errorModalMessage)
         });
@@ -72,15 +72,16 @@ const Form = (props) => {
     })
   };
   
-  const checkboxHandler = () => {
-    checkboxRef.current.checked = true;
-  };
-
   const submitHandler = (event) => {
     event.preventDefault();
 
     // setIsLoading(true);
-    
+    if (firstNameIsValid && emailIsValid && checkboxRef.current.checked) {
+      formIsValid = true;
+    } else {
+      return;
+    }
+    // TODO recaftor conditions
     if (!formIsValid) {
       return;
     }
@@ -94,6 +95,7 @@ const Form = (props) => {
     resetFirstName();
     resetEmail();
     checkboxRef.current.checked = false;
+    formIsValid = false;
   };
 
   // const firstNameClasses = firstNameHasError ? 'form-control invalid' : 'form-control';
@@ -114,7 +116,7 @@ const Form = (props) => {
           <input type="email" id="email" value={emailValue} onChange={emailChangeHandler} onBlur={emailBlurHandler} />
         </div>
         <div className={classes.check}>
-          <input type="checkbox" id="checkbox" ref={checkboxRef} onClick={checkboxHandler} />
+          <input type="checkbox" id="checkbox" ref={checkboxRef} />
           <label htmlFor="checkbox">
             By subscribing to the list, you have a chance to meet a very cool
             Sheep. But if you are a girl, then don't count on too much cause
