@@ -1,4 +1,4 @@
-import { useRef, useState, React, Fragment } from 'react';
+import React, { useRef, useState, Fragment } from 'react';
 import useInput from '../../hooks/use-input';
 
 import Modal from '../Modal/Modal';
@@ -55,7 +55,6 @@ const Form = (props) => {
         setModalIsShown(true);
         errorModalMessage = '';
         setErrorMessage(errorModalMessage)
-
       } else {
         return res.json().then((data) => {
           setModalIsShown(true);
@@ -85,7 +84,7 @@ const Form = (props) => {
 
   let hasError = firstNameHasError || emailHasError;
 
-  return (
+  return(
     <Fragment>
     <div className={classes.formSection}>
     {modalIsShown && <Modal onClose={hideModalHandler} errorMessage={errorMessage} />}

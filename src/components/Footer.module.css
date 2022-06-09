@@ -1,7 +1,8 @@
 .footerSection {
   height: 4vh;
   width: 100vw;
-  background-color: #f9f9f9;
+  background-color: #656565;
+  color: whitesmoke;
   overflow: hidden;
 }
 

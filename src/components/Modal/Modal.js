@@ -1,3 +1,5 @@
+import React from "react";
+
 import closeBtn from "../../img/closeX_200-200.svg"
 
 import classes from "./Modal.module.css";
