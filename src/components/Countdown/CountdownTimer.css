@@ -9,6 +9,11 @@
   text-transform: uppercase;
 }
 
+.countdownSection p {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
 .timer-wrap {
   display: flex;
   /* width: 60vw;
