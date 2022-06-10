@@ -1,0 +1,15 @@
+.countdownSection {
+  height: 50vh;
+  width: 100vw;
+  background-color: #f9f9f9;
+  text-align: center; 
+}
+
+ .countdownSection h1 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.countdownSection p {
+  font-size: 1rem;
+}
