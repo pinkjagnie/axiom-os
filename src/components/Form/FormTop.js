@@ -6,8 +6,7 @@ const FormTop = () => {
   return(
     <div className={classes.formTop}>
       <p>
-        Wanna level up? Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Aliquam tempor purus sit amet vehicula hendrerit.
+        Wanna level up? So get a new version of AxiomOS! Subscribing to the list will keep you up to date with AxiomOS information.
       </p>
       <h1>Sign in!</h1>
     </div>

@@ -120,6 +120,7 @@
 
   .main {
     position: relative;
+    height: 87vh;
   }
 
   .image img {
@@ -131,14 +132,14 @@
 
   .slogan {
     position: absolute;
-    top: 2vh;
+    top: 0;
     left: 50vw;
     width: 40vw;
     max-height: 70vh;
   }
 
   .slogan h1 {
-    margin: 1.3rem auto;
+    margin: 1.3rem auto 0 auto;
   }
 
   .points {

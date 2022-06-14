@@ -1,0 +1,38 @@
+.featuresSection {
+  height: 170vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.cardsContainer {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.cardsContainer h1 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 1.3rem;
+}
+
+.cardsContainer h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cardContent {
+  width: 80vw;
+  height: 45vh;
+  padding-top: 1rem;
+}
+
+.cardContent img {
+  display: block;
+  height: 30%;
+  margin: 0 auto;
+}
+
+.cardContent p {
+  text-align: justify;
+}

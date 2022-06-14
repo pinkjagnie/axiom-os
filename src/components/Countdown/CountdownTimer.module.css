@@ -1,5 +1,5 @@
 .countdownSection {
-  height: 50vh;
+  height: 30vh;
   width: 100vw;
   background-color: #f9f9f9;
   text-align: center; 
@@ -13,4 +13,34 @@
 
 .countdownSection p {
   font-size: 1rem;
+}
+
+@media (min-width: 360px) {
+  .countdownSection {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 390px) {
+  .countdownSection {
+    height: 20vh;
+  }
+}
+
+@media (min-width: 600px) {
+  .countdownSection {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .countdownSection {
+    height: 30vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .countdownSection {
+    height: 50vh;
+  }
 }

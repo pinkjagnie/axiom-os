@@ -3,7 +3,7 @@ import React from "react";
 import Form from "./Form/Form";
 
 import classes from "./About.module.css";
-import imgDate from "../img/data2_axiom_1000-200.svg";
+import imgDate from "../img/data2_axiom_1000-200.png";
 
 const About = () => {
   return (

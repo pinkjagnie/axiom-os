@@ -80,12 +80,12 @@
 	.formTop p {
 		width: 35vw;
 		margin: 1rem auto;
-		padding: 0;
+		padding: 1rem 0 0 0;
 		font-size: 1.1rem;
 	}
 
 	.formTop h1 {
-		padding: 0;
+		padding: 1.2rem 0 0 0;
 		margin: 1.1rem auto;
 	}
 }

@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import About from "./components/About";
 import CountdownTimer from "./components/Countdown/CountdownTimer";
-import SwiperGallery from "./components/Swiper/SwiperGallery";
+import Features from "./components/Features";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -17,7 +17,7 @@ function App() {
       <Main />
       <About />
       <CountdownTimer />
-      <SwiperGallery />
+      <Features />
       <Footer />
     </div>
   );

@@ -40,8 +40,9 @@ const Form = (props) => {
 
   async function addUser(firstNameValue, emailValue) {
     let errorModalMessage = '';
-    const response = await fetch('https://cors-anywhere.herokuapp.com/http://test.axiomos.pl/api/subuser/register', {
+    const response = await fetch('http://test.axiomos.pl/api/subuser/register', {
       method: 'POST',
+      mode: 'cors',
       body: JSON.stringify({
         name: firstNameValue,
         email: emailValue
@@ -104,6 +105,7 @@ const Form = (props) => {
             By subscribing to the list, you have a chance to meet a very cool
             Sheep. But if you are a girl, then don't count on too much cause
             Sheep already has super cool Sheep-girl - sorry!
+            {/* By subscribing to the list you will be up to date with information about AxiomOS. But don't worry - we won't be e-mailing too often, only the most important information! */}
           </label>
         </div>
         <button>Submit</button>

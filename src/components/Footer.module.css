@@ -1,29 +1,118 @@
 .footerSection {
-  height: 4vh;
+  height: 20vh;
   width: 100vw;
   background-color: #656565;
   color: whitesmoke;
   overflow: hidden;
 }
 
-.footerSection p {
-  padding: 0;
-  margin: 0;
-  line-height: 4vh;
-  font-size: 0.5rem;
+.container {
+  display: flex;
+  width: 80vw;
+  margin: auto;
+  padding: 0.7rem 0;
+}
+
+.copyright {
+  padding: 0 0.4rem;
+  flex-basis: 40vw;
+  font-size: 0.6rem;
   font-weight: bold;
-  text-align: center;
+}
+
+.mail {
+  color: #1F2B37;
+  text-decoration: none;
+}
+
+.author {
+  color: palevioletred;
+}
+
+.socialContainer {
+  margin: 1em 0;
+  padding-left: 0.8rem;
+}
+
+.social {
+  padding-right: 0.6rem;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (min-width: 360px) {
+  .footerSection {
+    height: 17vh;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+  }
+
+  .social {
+    padding-right: 0.7rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 390px) {
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .social {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 410px) {
-  .footerSection p {
-    font-size: 0.8rem;
-    margin: auto;
+  .footerSection {
+    height: 20vh;
+  }
+  
+  .copyright {
+    font-size: 1rem;
+  }
+
+  .social {
+    font-size: 1.6rem;
   }
 }
 
 @media (min-width: 600px) {
-  .footerSection p {
-    font-size: 1rem;
+  .copyright {
+    font-size: 1.1rem;
+  }
+
+  .social {
+    font-size: 1.8rem;
+    padding-right: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .socialContainer {
+    padding-left: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footerSection {
+    height: 30vh;
+  }
+
+  .copyright {
+    flex-basis: 50vw;
+    font-size: 1.2rem;
+  }
+
+  .social {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footerSection {
+    height: 25vh;
   }
 }
