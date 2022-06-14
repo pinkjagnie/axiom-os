@@ -155,7 +155,7 @@
 
   .formSection {
     position: absolute;
-    top: -2vh;
+    top: -5vh;
     left: 50vw;
     width: 40vw;
     height: 72vh;
@@ -193,4 +193,3 @@
     color: #1f2b37;
   }
 }
-

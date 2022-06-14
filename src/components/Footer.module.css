@@ -10,7 +10,7 @@
   display: flex;
   width: 80vw;
   margin: auto;
-  padding: 0.7rem 0;
+  padding: 0.5rem 0;
 }
 
 .copyright {
@@ -31,18 +31,19 @@
 
 .socialContainer {
   margin: 1em 0;
-  padding-left: 0.8rem;
+  padding-left: 1.3rem;
 }
 
 .social {
   padding-right: 0.6rem;
+  padding-top: 0.3rem;
   color: white;
   font-size: 1rem;
 }
 
 @media (min-width: 360px) {
   .footerSection {
-    height: 17vh;
+    height: 20vh;
   }
 
   .copyright {
@@ -51,6 +52,7 @@
 
   .social {
     padding-right: 0.7rem;
+    padding-top: 0.4rem;
     font-size: 1.2rem;
   }
 }
@@ -61,13 +63,18 @@
   }
 
   .social {
+    padding-top: 0.7rem;
     font-size: 1.4rem;
   }
 }
 
 @media (min-width: 410px) {
   .footerSection {
-    height: 20vh;
+    height: 25vh;
+  }
+
+  .container {
+    padding: 0.8rem 0;
   }
   
   .copyright {
@@ -80,6 +87,10 @@
 }
 
 @media (min-width: 600px) {
+  .footerSection {
+    height: 20vh;
+  }
+
   .copyright {
     font-size: 1.1rem;
   }
@@ -87,10 +98,15 @@
   .social {
     font-size: 1.8rem;
     padding-right: 1.2rem;
+    padding-top: 1rem;
   }
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding: 1rem 0;
+  }
+
   .socialContainer {
     padding-left: 3.5rem;
   }

@@ -36,3 +36,52 @@
 .cardContent p {
   text-align: justify;
 }
+
+@media (min-width: 360px) {
+  .featuresSection {
+    height: 140vh;
+  }
+
+  .cardContent {
+    height: 35vh;
+  }
+}
+
+@media (min-width: 390px) {
+  .featuresSection {
+    height: 120vh;
+  }
+
+  .cardContent {
+    height: 30vh;
+  }
+}
+
+@media (min-width: 410px) {
+  .featuresSection {
+    height: 105vh;
+  }
+
+  .cardContent {
+    height: 25vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardFeatures {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .cardContent {
+    height: 70vh;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .featuresSection {
+    height: 95vh;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faGithub, faTelegram, faPaypal } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faGithub, faTelegram, faPaypal, faPatreon } from "@fortawesome/free-brands-svg-icons";
 
 import classes from "./Footer.module.css";
 
@@ -26,6 +26,9 @@ const Footer = () => {
           </a>
           <a href="">
             <FontAwesomeIcon icon={faPaypal} className={classes.social} />
+          </a>
+          <a href="">
+            <FontAwesomeIcon icon={faPatreon} className={classes.social} />
           </a>
         </div>
       </div>
