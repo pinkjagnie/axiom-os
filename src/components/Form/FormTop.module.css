@@ -12,10 +12,12 @@
 }
 
 .formTop h1 {
+  position: relative;
   padding-top: 0.3em;
   text-transform: uppercase;
   text-align: center;
   color: whitesmoke;
+  z-index: 2;
 }
 
 @media (min-width: 360px) {
@@ -88,4 +90,14 @@
 		padding: 1.2rem 0 0 0;
 		margin: 1.1rem auto;
 	}
+}
+
+@media (min-width: 1366px) {
+  .formTop p {
+    font-size: 1.3rem;
+  }
+
+  .formTop h1 {
+    font-size: 2.8rem;
+  }
 }

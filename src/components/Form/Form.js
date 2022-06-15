@@ -102,9 +102,8 @@ const Form = (props) => {
         <div className={classes.check}>
           <input type="checkbox" id="checkbox" ref={checkboxRef} style={hasError ? {borderColor: '#9b0000'} : undefined}/>
           <label htmlFor="checkbox" style={hasError ? {color: '#9b0000'} : undefined}>
-          I agree to receive the most important updates about the state of Axiomos.
+          I agree to receive the most important updates about the state of AxiomOS.
           We will not inundate you with news, we respect your privacy.
-            {/* By subscribing to the list you will be up to date with information about AxiomOS. But don't worry - we won't be e-mailing too often, only the most important information! */}
           </label>
         </div>
         <button>Submit</button>

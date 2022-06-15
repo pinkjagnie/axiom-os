@@ -193,3 +193,18 @@
     color: #1f2b37;
   }
 }
+
+@media (min-width: 1366px) {
+  .control,
+  .check {
+    margin: 1.5rem auto;
+  } 
+
+  .control label {
+    font-size: 1.3rem;
+  }
+
+  .check label {
+    font-size: 1.3rem;
+  }
+}

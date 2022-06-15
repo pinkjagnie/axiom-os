@@ -127,7 +127,11 @@
     height: 162vh;
   }
 
-  .description p:first-of-type{
+  .description p {
+    font-size: 1.5rem;
+  }
+
+  .description p:first-of-type {
     position: absolute;
     top: 5vh;
     left: 5vw;
@@ -135,7 +139,6 @@
     margin: 2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    font-size: 1.5rem;
   }
 
   .description p:last-of-type {
@@ -161,5 +164,21 @@
     transform: translateX(-50%);
     width: auto;
     height: 45vh;
+  }
+}
+
+@media (min-width: 1366px) {
+  .description p {
+    font-size: 1.6rem;
+  }
+
+  .description p:first-of-type {
+    top: 7vh;
+    left: 5vw;
+  }
+
+  .description p:last-of-type {
+    bottom: 13vh;
+    left: 15vw;
   }
 }
