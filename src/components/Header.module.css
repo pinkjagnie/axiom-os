@@ -10,6 +10,7 @@
   left: 5%;
   top: 15%;
   width: 50vw;
+  z-index: 3;
 }
 
 @media (min-width: 360px) {
@@ -35,13 +36,5 @@
     left: 5%;
     top: 10%;
     width: 28vw;
-  }
-}
-
-@media (min-width: 1280px) {
-  .header .logo {
-    left: 5%;
-    top: 3%;
-    width: 25vw;
   }
 }

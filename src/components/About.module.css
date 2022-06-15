@@ -173,12 +173,13 @@
   }
 
   .description p:first-of-type {
-    top: 7vh;
+    top: 6vh;
     left: 5vw;
   }
 
   .description p:last-of-type {
     bottom: 13vh;
-    left: 15vw;
+    left: 20vw;
+    width: 60vw;
   }
 }
