@@ -20,9 +20,12 @@
   font-weight: bold;
 }
 
+.copyright a {
+  text-decoration: none;
+}
+
 .mail {
   color: #1F2B37;
-  text-decoration: none;
 }
 
 .author {
