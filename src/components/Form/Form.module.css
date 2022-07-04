@@ -72,7 +72,13 @@
   cursor: pointer;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 360px) and (min-height: 640px) {
+  .blank {
+    height: 2vh;
+    top: -1vh;
+    left: 0;
+  }
+
   .control,
   .check {
     margin: 1.3rem auto;

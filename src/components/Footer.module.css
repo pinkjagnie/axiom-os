@@ -105,7 +105,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .container {
     padding: 1rem 0;
   }
@@ -123,6 +123,10 @@
   .copyright {
     flex-basis: 50vw;
     font-size: 1.2rem;
+  }
+
+  .mail:hover {
+    color: whitesmoke;
   }
 
   .social {

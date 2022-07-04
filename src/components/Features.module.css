@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+.cardFeatures {
+  padding-bottom: 1.5rem;
+}
+
 .cardsContainer h1 {
   text-transform: uppercase;
   text-align: center;
@@ -37,13 +41,23 @@
   text-align: justify;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 360px) and (min-height: 640px) {
   .featuresSection {
-    min-height: 140vh;
+    min-height: 145vh;
   }
 
   .cardContent {
-    height: 35vh;
+    height: 40vh;
+  }
+
+  .cardContent:nth-of-type(1) {
+    height: 30vh;
+  }
+}
+
+@media (min-width: 360px) and (min-height: 740px) {
+  .featuresSection {
+    min-height: 125vh;;
   }
 }
 
@@ -62,7 +76,8 @@
     min-height: 105vh;
   }
 
-  .cardContent {
+  .cardContent,
+  .cardContent:nth-of-type(1) {
     height: 25vh;
   }
 }
@@ -72,11 +87,11 @@
     display: flex;
     width: 80vw;
     height: auto;
-    padding-bottom: 1.5rem;
     margin: 0 auto;
   }
 
-  .cardContent {
+  .cardContent,
+  .cardContent:nth-of-type(1) {
     height: 70vh;
     padding: 1.5rem;
   }

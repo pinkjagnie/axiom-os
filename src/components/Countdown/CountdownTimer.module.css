@@ -33,7 +33,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .countdownSection {
     min-height: 30vh;
   }

@@ -6,7 +6,7 @@
 
 .aboutSection {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   overflow: hidden;
   background-color: #1f2b37;
@@ -27,7 +27,15 @@
   width: auto;
 }
 
-@media (min-width: 360px) {
+@media (min-width: 360px) and (min-height: 640px) {
+  .aboutCard {
+    min-height: 175vh;
+  }
+  
+  .aboutSection {
+    min-height: 110vh;
+  }
+
   .description p {
     font-size: 1.2rem;
     margin: 1.8rem auto;
@@ -43,6 +51,16 @@
     transform: translateX(-50%);
     height: 30vh;
     width: auto;
+  }
+}
+
+@media (min-width: 360px) and (min-height: 740px) {
+  .aboutCard {
+    min-height: 165vh;
+  }
+
+  .aboutSection {
+    min-height: 100vh;
   }
 }
 

@@ -46,7 +46,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (orientation: portrait) {
   .navBar {
     margin-top: 4%;
     margin-left: 14vw;

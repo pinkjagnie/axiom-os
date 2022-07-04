@@ -14,7 +14,6 @@ const Footer = () => {
           <p>&copy; AxiomOS project</p>
           <p>Want to contact with us? <a href="mailto:contact@axiomos.pl" className={classes.mail}>Just send us an email</a></p>
           <p>Built with <GiPawHeart className={classes.author} /> by <span><a href="https://github.com/pinkjagnie" target="_blank" rel="noopener noreferrer" className={classes.author}>PinkJagnie</a></span></p>
-          
         </div>
         <div className={classes.socialContainer}>
           <a href="https://twitter.com/axiomos_aosp" target="_blank" rel="noopener noreferrer">
