@@ -1,0 +1,82 @@
+.navBar {
+  width: 40vw;
+  margin-top: 2%;
+  margin-left: 15vw;
+}
+
+.navBar nav ul li {
+  display: inline-block;
+  font-weight: bold;
+  animation: menuDrop 0.7s ease-in;
+  transition: all 0.7s ease-in;
+}
+
+.navBar nav ul li .link {
+  text-decoration: none;
+  color: #1f2b37;
+}
+
+@media (min-width: 360px) and (min-height: 640px) {
+  .navBar {
+    margin-top: 4%;
+  }
+}
+
+@media (min-width: 360px) and (min-height: 740px) {
+  .navBar {
+    margin-top: 5%;
+  }
+}
+
+@media (min-width: 390px) {
+  .navBar {
+    margin-top: 7%;
+  }
+}
+
+@media (min-width: 410px) {
+  .navBar {
+    margin-left: 10vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .navBar {
+    margin-top: 5%;
+  }
+}
+
+@media (min-width: 768px) {
+  .navBar {
+    margin-top: 4%;
+    margin-left: 14vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navBar {
+    margin-top: 1%;
+    margin-left: 55vw;
+  }
+  
+  .navBar nav ul li .link:hover {
+    border-bottom: 5px solid #656565;
+  }
+}
+
+@keyframes menuDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+ 
+  50% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+ 
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

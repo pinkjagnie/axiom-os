@@ -1,11 +1,17 @@
-.header {
+.headerSection {
   width: 100vw;
-  min-height: 10vh;
+  height: 10vh;
   overflow: hidden;
   background-color: #f9f9f9;
 }
 
-.header .logo {
+.headerContainer {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+}
+
+.headerSection .headerContainer .logo {
   position: relative;
   left: 5%;
   top: 15%;
@@ -14,7 +20,7 @@
 }
 
 @media (min-width: 360px) {
-  .header .logo {
+  .headerSection .headerContainer .logo {
     left: 5%;
     top: 15%;
     width: 55vw;
@@ -22,17 +28,21 @@
 }
 
 @media (min-width: 410px) {
-  .header .logo {
+  .headerSection .headerContainer .logo {
     width: 60vw;
   }
 }
 
 @media (min-width: 1024px) {
-  .header {
-    min-height: 13vh;
+  .headerSection {
+    height: 13vh;
   }
 
-  .header .logo {
+  .headerContainer {
+    height: 13vh;
+  }
+
+  .headerSection .headerContainer .logo {
     left: 5%;
     top: 10%;
     width: 28vw;
