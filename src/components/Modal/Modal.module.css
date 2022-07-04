@@ -13,7 +13,7 @@
   top: 25vh;
   left: calc(50% - 35vw);
   width: 60vw;
-  height: 50vh;
+  min-height: 50vh;
   background-color: white;
   padding: 1rem;
   border-radius: 14px;

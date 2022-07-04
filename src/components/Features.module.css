@@ -1,5 +1,5 @@
 .featuresSection {
-  height: 170vh;
+  min-height: 170vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@
   padding-top: 1.3rem;
 }
 
-.cardsContainer h2 {
+.cardTitle {
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto;
@@ -33,13 +33,13 @@
   margin: 0 auto;
 }
 
-.cardContent p {
+.cardDescription {
   text-align: justify;
 }
 
 @media (min-width: 360px) {
   .featuresSection {
-    height: 140vh;
+    min-height: 140vh;
   }
 
   .cardContent {
@@ -49,7 +49,7 @@
 
 @media (min-width: 390px) {
   .featuresSection {
-    height: 120vh;
+    min-height: 120vh;
   }
 
   .cardContent {
@@ -59,7 +59,7 @@
 
 @media (min-width: 410px) {
   .featuresSection {
-    height: 105vh;
+    min-height: 105vh;
   }
 
   .cardContent {
@@ -71,6 +71,8 @@
   .cardFeatures {
     display: flex;
     width: 80vw;
+    height: auto;
+    padding-bottom: 1.5rem;
     margin: 0 auto;
   }
 
@@ -82,6 +84,6 @@
 
 @media (min-width: 1280px) {
   .featuresSection {
-    height: 95vh;
+    min-height: 95vh;
   }
 }

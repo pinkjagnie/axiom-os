@@ -1,5 +1,5 @@
 .footerSection {
-  height: 20vh;
+  min-height: 20vh;
   width: 100vw;
   background-color: #656565;
   color: whitesmoke;
@@ -46,7 +46,7 @@
 
 @media (min-width: 360px) {
   .footerSection {
-    height: 20vh;
+    min-height: 20vh;
   }
 
   .copyright {
@@ -73,7 +73,7 @@
 
 @media (min-width: 410px) {
   .footerSection {
-    height: 25vh;
+    min-height: 25vh;
   }
 
   .container {
@@ -91,7 +91,7 @@
 
 @media (min-width: 600px) {
   .footerSection {
-    height: 20vh;
+    min-height: 20vh;
   }
 
   .copyright {
@@ -117,7 +117,7 @@
 
 @media (min-width: 1024px) {
   .footerSection {
-    height: 30vh;
+    min-height: 30vh;
   }
 
   .copyright {
@@ -128,10 +128,14 @@
   .social {
     font-size: 2rem;
   }
+
+  .social:hover {
+    color: #1f2b37;
+  }
 }
 
 @media (min-width: 1280px) {
   .footerSection {
-    height: 25vh;
+    min-height: 25vh;
   }
 }

@@ -19,7 +19,7 @@ const CountdownTimer = () => {
         titlePosition='bottom'
         theme='dark'
         size='large'
-        endAt={'2022-07-15 00:00:00'}
+        endAt={'2022-07-30 00:00:00'}
       />
     </div>
   );

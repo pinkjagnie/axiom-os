@@ -1,6 +1,6 @@
 .header {
   width: 100vw;
-  height: 10vh;
+  min-height: 10vh;
   overflow: hidden;
   background-color: #f9f9f9;
 }
@@ -29,7 +29,7 @@
 
 @media (min-width: 1024px) {
   .header {
-    height: 13vh;
+    min-height: 13vh;
   }
 
   .header .logo {

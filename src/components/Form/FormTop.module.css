@@ -1,5 +1,5 @@
 .formTop {
-  height: 35vh;
+  min-height: 35vh;
   width: 100vw;
   overflow: hidden;
   background-color: #656565;
@@ -73,7 +73,7 @@
 		bottom: 30vh;
 		left: 50vw;
 		width: 40vw;
-		height: 30vh;
+		min-height: 30vh;
 		box-sizing: border-box;
 		border-top: 1px solid #656565;
 		border-radius: 12px;

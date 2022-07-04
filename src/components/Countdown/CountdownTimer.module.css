@@ -1,5 +1,5 @@
 .countdownSection {
-  height: 30vh;
+  min-height: 30vh;
   width: 100vw;
   background-color: #f9f9f9;
   text-align: center; 
@@ -17,30 +17,30 @@
 
 @media (min-width: 360px) {
   .countdownSection {
-    height: 25vh;
+    min-height: 25vh;
   }
 }
 
 @media (min-width: 390px) {
   .countdownSection {
-    height: 20vh;
+    min-height: 20vh;
   }
 }
 
 @media (min-width: 600px) {
   .countdownSection {
-    height: 25vh;
+    min-height: 25vh;
   }
 }
 
 @media (min-width: 768px) {
   .countdownSection {
-    height: 30vh;
+    min-height: 30vh;
   }
 }
 
 @media (min-width: 1024px) {
   .countdownSection {
-    height: 50vh;
+    min-height: 50vh;
   }
 }

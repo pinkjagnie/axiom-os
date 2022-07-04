@@ -1,5 +1,5 @@
 .aboutCard {
-  height: 165vh;
+  min-height: 165vh;
   width: 100vw;
   background-color: #1f2b37;
 }
@@ -117,7 +117,7 @@
 @media (min-width: 1024px) {
   .aboutCard {
     position: relative;
-    height: 162vh;
+    min-height: 162vh;
   }
 
   .aboutSection {
