@@ -4,7 +4,7 @@ import FormTop from "./Form/FormTop";
 
 import classes from "./Main.module.css";
 
-import phonesImg from "../img/phones_400-300.png";
+import phonesImg from "../img/phones_800-600.png";
 import liDot from "../img/ul_style2_160-160.svg";
 
 const Main = () => {
