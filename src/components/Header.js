@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "./Navigation";
 
 import classes from "./Header.module.css";
-import logo from "../img/logo_220-50.svg";
+import logo from "../img/logo-blank_220-50.svg";
 
 const Header = () => {
   return (
